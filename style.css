@@ -1168,3 +1168,36 @@ body.dark-mode #dark-mode-toggle:hover {
     color: #fff;
     cursor: pointer;
 }
+/* ==============================
+   MONÓLOGOS 6TO MIR
+============================== */
+.monologos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.monologos-grid video {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #000;
+    cursor: pointer;
+}
+/* ==============================
+   BOTONES LENGUA ESPAÑOLA
+============================== */
+.lengua-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.lengua-buttons .nav-button {
+    padding: 14px 24px;
+    font-size: 1rem;
+    border-radius: 12px;
+}
