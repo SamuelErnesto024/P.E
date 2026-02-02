@@ -167,14 +167,14 @@ body.dark-mode .credits-box {
 /* Contenedor del menú lateral */
 #floating-nav-container {
     position: fixed;
-    top: 50%; /* Centrado vertical */
+    top: 55%; /* Centrado vertical */
     right: 20px;
     transform: translateY(-50%);
     z-index: 1001; /* Más alto que el resto */
     display: none; /* Oculto por defecto, se muestra después del splash */
 }
 
-/* Botón principal (hamburguesa) */
+/* Botón principal*/
 #nav-toggle-button {
     background-color: var(--hover-color);
     color: white;
@@ -1200,4 +1200,137 @@ body.dark-mode #dark-mode-toggle:hover {
     padding: 14px 24px;
     font-size: 1rem;
     border-radius: 12px;
+}
+/* BOTÓN MODO NOCHE / DÍA */
+#dark-mode-toggle {
+    position: fixed;
+    top: 200px;   /* ajusta si lo quieres más arriba o abajo */
+    right: 20px;
+    z-index: 10000;
+    font-size: 22px;
+    cursor: pointer;
+}
+@media (min-width: 1024px) {
+    .content-area {
+        padding: 40px;
+    }
+
+    .content-section {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+@media (max-width: 768px) {
+
+    /* Textos */
+    body {
+        font-size: 15px;
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+    }
+
+    /* Cuadros de imágenes y videos */
+    .image-grid,
+    .video-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Botón menú ☰ */
+    #nav-toggle-button {
+        top: 20px;
+        right: 15px;
+        font-size: 24px;
+    }
+
+    /* Botón modo noche */
+    #dark-mode-toggle {
+        top: 70px;
+        right: 15px;
+    }
+}
+#menu-scrollbar {
+    margin-top: 8px;
+    width: 60%;          /* ⬅️ más corta */
+    height: 4px;         /* ⬅️ más delgada */
+    align-self: center;  /* centrada */
+    cursor: pointer;
+    opacity: 0.7;
+}
+/* ===============================
+   BOTÓN ☰ Y MENÚ LATERAL MEJORADO
+================================ */
+
+#floating-nav-container {
+    position: fixed;
+    top: 120px;               /* BAJA el botón (ajusta si quieres) */
+    right: 20px;
+    z-index: 9999;
+}
+
+/* Botón ☰ */
+#nav-toggle-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    background: var(--accent-color);
+    color: #fff;
+}
+
+/* Contenedor del menú */
+#floating-nav-buttons {
+    position: absolute;
+    top: 0;
+    right: 60px;              /* SE ABRE HACIA LA IZQUIERDA */
+    width: 260px;
+    max-height: 70vh;         /* Altura máxima */
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    display: none;
+    overflow-y: auto;         /* SCROLL INTERNO */
+}
+
+/* Mostrar menú */
+#floating-nav-container.open #floating-nav-buttons {
+    display: block;
+}
+
+/* Scroll bonito */
+#floating-nav-buttons::-webkit-scrollbar {
+    width: 6px;
+}
+#floating-nav-buttons::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+}
+
+/* Botones del menú */
+#floating-nav-buttons .nav-button {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* ===============================
+   MODO TELÉFONO
+================================ */
+@media (max-width: 768px) {
+    #floating-nav-container {
+        top: 90px;
+        right: 10px;
+    }
+
+    #floating-nav-buttons {
+        width: 85vw;          /* Más ancho en móvil */
+        right: 60px;
+        max-height: 75vh;
+    }
 }
