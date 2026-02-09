@@ -1334,3 +1334,45 @@ body.dark-mode #dark-mode-toggle:hover {
         max-height: 75vh;
     }
 }
+.contact-link {
+    text-decoration: none;
+    color: var(--accent-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+}
+.footer-contact {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-icon {
+    width: 18px;
+    height: 18px;
+}
