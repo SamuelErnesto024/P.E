@@ -1376,3 +1376,56 @@ body.dark-mode #dark-mode-toggle:hover {
     width: 18px;
     height: 18px;
 }
+/* ===== AJUSTE GLOBAL RESPONSIVE ===== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+/* ===== CELULARES ===== */
+@media (max-width: 768px) {
+
+  .content-area {
+    padding: 12px;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .nav-button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  /* Cuadros de imágenes / videos */
+  .image-grid,
+  .video-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+/* ===== TABLETS ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .image-grid,
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ===== PC ===== */
+@media (min-width: 1025px) {
+
+  .image-grid,
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
