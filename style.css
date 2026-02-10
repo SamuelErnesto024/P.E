@@ -1429,3 +1429,46 @@ img, video {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* ===== CORRECCIÓN ZOOM EN TELÉFONOS ===== */
+@media (max-width: 768px) {
+  body {
+    zoom: 1 !important;
+    transform: none !important;
+  }
+}
+@media (max-width: 768px) {
+
+  .search-button,
+  #search-button,
+  .btn-search {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    z-index: 9999;
+    transform: none !important;
+  }
+}
+@media (max-width: 768px) {
+  header,
+  nav,
+  .floating-nav-container {
+    overflow: visible;
+  }
+}
+@media (max-width: 768px) {
+  .search-button,
+  #search-button,
+  .btn-search {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 412px) {
+  .search-button,
+  #search-button,
+  .btn-search {
+    bottom: 25px;
+    right: 12px;
+  }
+}
