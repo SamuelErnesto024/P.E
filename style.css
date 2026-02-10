@@ -1472,3 +1472,34 @@ img, video {
     right: 12px;
   }
 }
+/* ===== BOTÓN VISIBLE EN MODO VERTICAL ===== */
+@media (max-width: 768px) and (orientation: portrait) {
+
+  .search-button,
+  #search-button,
+  .btn-search {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 90px !important; /* CLAVE */
+    right: 15px !important;
+    z-index: 99999 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+}
+@media (max-width: 768px) {
+  header,
+  nav,
+  .main-header,
+  .main-nav {
+    overflow: visible !important;
+  }
+}
+@media (orientation: portrait) {
+  .search-button,
+  #search-button,
+  .btn-search {
+    display: flex !important;
+  }
+}
